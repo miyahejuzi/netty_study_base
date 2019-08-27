@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.orange'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// jar 没有的时候在哪里寻找
+repositories {
+    mavenCentral()
+}
+
+// 描述你项目中的各种依赖
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

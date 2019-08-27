@@ -1,0 +1,3 @@
+rootProject.name = 'netty_study_base'
+include 'netty_example'
+
