@@ -1,4 +1,4 @@
-package cn.orange.first.example;
+package cn.orange.httpserver.example;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

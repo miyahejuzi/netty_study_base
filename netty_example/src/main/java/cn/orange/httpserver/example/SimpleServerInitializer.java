@@ -1,4 +1,4 @@
-package cn.orange.first.example;
+package cn.orange.httpserver.example;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
