@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>web socket client</title>
+</head>
+<body>
+
+<form onsubmit="return false">
+  <textarea name="message" style="width: 400px; height: 200px"></textarea>
+  
+  <input type="button" value="发送数据" onclick="sendData('data from the client ')">
+  
+  <h3>服务端的响应内容</h3>
+  <textarea id="responseText" style="width: 400px; height: 200px"></textarea>
+  
+  <input type="button" value="清空数据"
+         onclick="document.getElementById('responseText').value=''"/>
+
+</form>
+
+<script type="text/javascript">
+    var $ta = document.getElementById('responseText');
+    var socket;
+    
+    if (window.WebSocket) {
+        socket = new WebSocket("ws://localhost:8899/ws");
+        // 当收到了服务器端发过来的消息之后, 就会被调用
+        socket.onmessage = function (ev) {
+            $ta.value = $ta.value + "\n" + ev.data;
+        };
+        socket.onopen = function (ev) {
+            $ta.value = "链接开启";
+        };
+        socket.onclose = function (ev) {
+            $ta.value = $ta.value + "\n" + "链接断掉";
+        }
+        
+    } else {
+        console.log('浏览器不支持 socket ');
+    }
+
+    function sendData(message) {
+        if(window.WebSocket) {
+            if(socket.readyState === WebSocket.OPEN) {
+                socket.send(message)
+            } else {
+                console.log('socket 链接尚未开启 ');
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
