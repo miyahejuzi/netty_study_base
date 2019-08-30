@@ -1,0 +1,31 @@
+syntax = "proto2";
+
+package cn.orange.proto;
+
+option optimize_for = SPEED;
+option java_package = "cn.orange.proto";
+option java_outer_classname = "DataInfo";
+
+message Data {
+    enum DataType {
+        StudentType = 1;
+        TeacherType = 2;
+    }
+    required DataType data_type = 1;
+
+    oneof dataBody {
+        Teacher teacher = 2;
+        Student student = 3;
+    }
+}
+
+message Student {
+    required string name = 1;
+    required int32 age = 2;
+    required string address = 3;
+}
+
+message Teacher {
+    optional string name = 1;
+    optional string work = 2;
+}
