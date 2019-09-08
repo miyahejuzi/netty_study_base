@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/netty_example.iml" filepath="$PROJECT_DIR$/.idea/modules/netty_example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nio_example.iml" filepath="$PROJECT_DIR$/.idea/modules/nio_example.iml" />
     </modules>
   </component>
 </project>

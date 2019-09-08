@@ -16,12 +16,15 @@ import org.apache.thrift.transport.TTransportException;
 public class ThriftServer {
 
     public static void main(String[] args) throws TTransportException {
-
+        // 客户端和服务端链接的对象
         TNonblockingServerSocket socket = new TNonblockingServerSocket(8899);
+        // 半同步半异步 half sync, 传输协议必须用 帧格式协议
         THsHaServer.Args arg = new THsHaServer.Args(socket).minWorkerThreads(2).maxWorkerThreads(4);
         PersonService.Processor<PersonServiceImpl> processor = new PersonService.Processor<>(new PersonServiceImpl());
 
+        // 协议层
         arg.protocolFactory(new TCompactProtocol.Factory());
+        // 传输层所用的对象
         arg.transportFactory(new TFramedTransport.Factory());
         arg.processorFactory(new TProcessorFactory(processor));
 

@@ -16,6 +16,7 @@ import org.apache.thrift.transport.TTransportException;
 public class ThriftClient {
 
     public static void main(String[] args) {
+        // 和客户端所用的 传输层和协议层 需要一致, 才能正确
         TTransport transport = new TFramedTransport(new TSocket("localhost", 8899), 600);
         TProtocol protocol = new TCompactProtocol(transport);
         PersonService.Client client = new PersonService.Client(protocol);
