@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/netty_example" />
             <option value="$PROJECT_DIR$/nio_example" />
+            <option value="$PROJECT_DIR$/thread_study" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
