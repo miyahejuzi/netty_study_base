@@ -12,7 +12,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  */
 public class ChatServer {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void openChatServer(String[] args) throws InterruptedException {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
@@ -32,4 +32,9 @@ public class ChatServer {
         }
 
     }
+
+    public static void main(String[] args) throws InterruptedException {
+        openChatServer(args);
+    }
 }
+

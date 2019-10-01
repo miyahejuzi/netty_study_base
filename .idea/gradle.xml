@@ -5,12 +5,14 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="E:/JavaResource/gradle-5.4-rc-1" />
+        <option name="gradleHome" value="$USER_HOME$/application/gradle-5.4" />
+        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/netty_example" />
             <option value="$PROJECT_DIR$/nio_example" />
+            <option value="$PROJECT_DIR$/reactor_pattern" />
             <option value="$PROJECT_DIR$/thread_study" />
           </set>
         </option>

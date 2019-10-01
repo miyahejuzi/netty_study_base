@@ -2,4 +2,5 @@ rootProject.name = 'netty_study_base'
 include 'netty_example'
 include 'nio_example'
 include 'thread_study'
+include 'reactor_pattern'
 
