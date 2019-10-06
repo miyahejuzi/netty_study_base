@@ -80,7 +80,6 @@ public abstract class BaseTcpSelector {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
 }

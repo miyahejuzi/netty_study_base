@@ -1,6 +1,5 @@
 package cn.miya.reactor.example2;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 

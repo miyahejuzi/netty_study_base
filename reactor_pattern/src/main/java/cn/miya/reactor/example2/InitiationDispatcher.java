@@ -19,7 +19,7 @@ public class InitiationDispatcher {
         this.selector = selector;
     }
 
-    public void regist(EventType eventType, EventHandler handler) {
+    public void registe(EventType eventType, EventHandler handler) {
         eventHandlerMap.put(eventType, handler);
     }
 

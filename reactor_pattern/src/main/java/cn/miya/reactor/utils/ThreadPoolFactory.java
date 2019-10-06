@@ -1,13 +1,9 @@
-package cn.orange.thread.utils;
+package cn.miya.reactor.utils;
 
 import cn.hutool.core.thread.ThreadFactoryBuilder;
 
 import java.util.concurrent.*;
 
-/**
- * @author kz
- * @date 2019/9/13
- */
 public class ThreadPoolFactory {
 
     public static ExecutorService getThreadPool(int size, String name) {

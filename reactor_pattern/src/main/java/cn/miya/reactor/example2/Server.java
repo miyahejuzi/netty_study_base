@@ -29,8 +29,8 @@ public class Server {
      */
     public void start() {
         // 添加 accept 事件, 和处理器
-        eventLooper.regist(EventType.EV_ACCEPT, new AcceptEventHandler(selector));
-        eventLooper.regist(EventType.EV_READ, new ReadEventHandler());
+        eventLooper.registe(EventType.EV_ACCEPT, new AcceptEventHandler(selector));
+        eventLooper.registe(EventType.EV_READ, new ReadEventHandler());
 
         new Thread(acceptor, "Acceptor-" + acceptor.getPort()).start();
         eventLooper.handleEvents();
