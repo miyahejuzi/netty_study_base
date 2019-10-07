@@ -15,7 +15,7 @@ public class Storage {
     /**
      * ali 的规范约束必须要用手动创建的线程池, 所以我........
      */
-    private ExecutorService cachedThreadPool = ThreadPoolFactory.getThreadPool(6);
+    private ExecutorService cachedThreadPool = ThreadPoolFactory.getThreadPool(6, "thread");
     private static final int MAX_SIZE = 10;
     private final LinkedList<Object> list = new LinkedList<>();
 

@@ -10,11 +10,17 @@ targetCompatibility = 1.8
 
 // jar 没有的时候在哪里寻找
 repositories {
-    mavenCentral()
+//    mavenCentral()
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
 }
 
 // 描述你项目中的各种依赖
 dependencies {
+
+    compileOnly 'org.projectlombok:lombok:1.18.2'
+
     // https://mvnrepository.com/artifact/cn.hutool/hutool-all
     compile group: 'cn.hutool', name: 'hutool-all', version: '4.6.3'
     // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
